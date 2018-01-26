@@ -8,4 +8,47 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="de.aik_master.indianconverter.indiannumberingconverter.MainActivity$FromIndianFragment">
 
+    <EditText
+        android:id="@+id/value_to_convert_from_indian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/label_from_indian_value"
+        android:layout_toEndOf="@+id/result_from_indian"
+        android:layout_toRightOf="@+id/result_from_indian"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/label_from_indian_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="@string/label_from_indian"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- TODO: autoscale result https://developer.android.com/preview/features/autosizing-textview.html -->
+
+    <TextView
+        android:id="@+id/label_from_indian_indian_numbering"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/value_to_convert_from_indian"
+        android:layout_marginTop="54dp"
+        android:text="@string/label_result_from_indian"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/result_from_indian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/label_from_indian_indian_numbering"
+        android:textSize="28sp" />
+
+
 </RelativeLayout>

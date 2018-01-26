@@ -2,4 +2,6 @@
     <string name="app_name">IndianNumberingConverter</string>
     <string name="label_indian_numbering">Indian Numbering:</string>
     <string name="label_value">Value:</string>
+    <string name="label_from_indian">Number in Indian Formating:</string>
+    <string name="label_result_from_indian">Arabic representation:</string>
 </resources>
