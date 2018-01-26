@@ -9,7 +9,7 @@
     tools:context="de.aik_master.indianconverter.indiannumberingconverter.MainActivity$ToIndianFragment">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/value_to_convert_to_indian"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -23,11 +23,25 @@
         android:id="@+id/label_to_indian_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText"
-        android:layout_alignBottom="@+id/editText"
+        android:layout_alignBaseline="@+id/value_to_convert_to_indian"
+        android:layout_alignBottom="@+id/value_to_convert_to_indian"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:text="Value:"
+        android:text="@string/label_value"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- TODO: autoscale result https://developer.android.com/preview/features/autosizing-textview.html -->
+
+    <TextView
+        android:id="@+id/label_to_indian_indian_numbering"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/value_to_convert_to_indian"
+        android:layout_marginTop="63dp"
+        android:text="@string/label_indian_numbering"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -37,18 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/label_to_indian_indian_numbering"/>
-
-    <TextView
-        android:id="@+id/label_to_indian_indian_numbering"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/editText"
-        android:layout_marginTop="63dp"
-        android:text="Indian Numbering:"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:layout_below="@+id/label_to_indian_indian_numbering"
+        android:textSize="28sp" />
 
 </RelativeLayout>

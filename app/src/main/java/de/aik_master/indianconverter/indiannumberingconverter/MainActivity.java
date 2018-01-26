@@ -9,9 +9,16 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.math.BigDecimal;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static class FromIndianFragment extends Fragment {
+        public FromIndianFragment() {
+        }
+
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
@@ -46,10 +56,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static class ToIndianFragment extends Fragment {
+        public ToIndianFragment() {
+        }
+
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_to_indian, container, false);
+
+            final ToIndianConverter toIndianConverter = new ToIndianConverter();
+
+            final TextView toIndianResult = (TextView) rootView.findViewById(R.id.result_to_indian);
+
+            EditText valueToConvert = (EditText) rootView.findViewById(R.id.value_to_convert_to_indian);
+            valueToConvert.addTextChangedListener(new ToIndianTextWatcher(toIndianConverter, toIndianResult));
             return rootView;
         }
     }
@@ -62,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
-            switch (position){
+            switch (position) {
                 case 0:
                     return new ToIndianFragment();
                 case 1:
