@@ -8,4 +8,47 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="de.aik_master.indianconverter.indiannumberingconverter.MainActivity$ToIndianFragment">
 
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/label_to_indian_value"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/label_to_indian_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editText"
+        android:layout_alignBottom="@+id/editText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Value:"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/result_to_indian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/label_to_indian_indian_numbering"/>
+
+    <TextView
+        android:id="@+id/label_to_indian_indian_numbering"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editText"
+        android:layout_marginTop="63dp"
+        android:text="Indian Numbering:"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
 </RelativeLayout>

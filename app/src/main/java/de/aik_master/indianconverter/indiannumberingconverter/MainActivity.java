@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_from_indian, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_to_indian, container, false);
             return rootView;
         }
     }
@@ -64,9 +64,9 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position){
                 case 0:
-                    return new FromIndianFragment();
-                case 1:
                     return new ToIndianFragment();
+                case 1:
+                    return new FromIndianFragment();
             }
             return null;
         }
