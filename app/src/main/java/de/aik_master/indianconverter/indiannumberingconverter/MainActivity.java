@@ -51,6 +51,14 @@ public class MainActivity extends AppCompatActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_from_indian, container, false);
+
+            final FromIndianConverter fromIndianConverter = new FromIndianConverter();
+
+            final TextView fromIndianResult = (TextView) rootView.findViewById(R.id.result_from_indian);
+
+            EditText valueToConvert = (EditText) rootView.findViewById(R.id.value_to_convert_from_indian);
+            valueToConvert.addTextChangedListener(new FromIndianTextWatcher(fromIndianConverter, fromIndianResult));
+
             return rootView;
         }
     }
@@ -70,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
             EditText valueToConvert = (EditText) rootView.findViewById(R.id.value_to_convert_to_indian);
             valueToConvert.addTextChangedListener(new ToIndianTextWatcher(toIndianConverter, toIndianResult));
+
             return rootView;
         }
     }

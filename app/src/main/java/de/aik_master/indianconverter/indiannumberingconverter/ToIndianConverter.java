@@ -18,9 +18,6 @@ class ToIndianConverter {
         if (valueToConvert.compareTo(LAKH_CRORE) > -1) {
             return valueToConvert.divide(LAKH_CRORE) + " lakh crore";
         }
-        if (valueToConvert.compareTo(THOUSAND_CRORE) > -1) {
-            return valueToConvert.divide(THOUSAND_CRORE) + " thousand crore";
-        }
         if (valueToConvert.compareTo(CRORE) > -1) {
             return valueToConvert.divide(CRORE) + " crore";
         }

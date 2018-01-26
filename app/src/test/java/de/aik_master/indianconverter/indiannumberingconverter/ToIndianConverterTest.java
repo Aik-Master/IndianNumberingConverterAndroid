@@ -25,8 +25,8 @@ public class ToIndianConverterTest {
         assertEquals("1 lakh crore", subject.getConversion(new BigDecimal("1000000000000")));
     }
     @Test
-    public void shouldReturn1ThousandCroreFor10000000000() throws Exception {
-        assertEquals("1 thousand crore", subject.getConversion(new BigDecimal("10000000000")));
+    public void shouldReturn1000CroreFor10000000000() throws Exception {
+        assertEquals("1000 crore", subject.getConversion(new BigDecimal("10000000000")));
     }
     @Test
     public void shouldReturn1CroreFor10000000() throws Exception {

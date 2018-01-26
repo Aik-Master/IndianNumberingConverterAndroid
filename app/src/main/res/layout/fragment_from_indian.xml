@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/label_from_indian_value"
         android:layout_toEndOf="@+id/result_from_indian"
-        android:layout_toRightOf="@+id/result_from_indian"
+        android:layout_alignParentLeft="true"
         android:ems="10" />
 
     <TextView
