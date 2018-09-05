@@ -27,7 +27,7 @@ public class FromIndianConverterTest {
 
     @Test
     public void shouldReturn10000For1lakh() throws Exception {
-        assertEquals(new BigDecimal("10000"), subject.getConversion("1lakh"));
+        assertEquals(new BigDecimal("100000"), subject.getConversion("1lakh"));
     }
 
     @Test
@@ -37,16 +37,16 @@ public class FromIndianConverterTest {
 
     @Test
     public void shouldReturn100000For1_lakh() throws Exception {
-        assertEquals(new BigDecimal("10000"), subject.getConversion("1 lakh"));
+        assertEquals(new BigDecimal("100000"), subject.getConversion("1 lakh"));
     }
 
     @Test
     public void shouldReturn100000For1_lakh_crore() throws Exception {
-        assertEquals(new BigDecimal("100000000000"), subject.getConversion("1 lakh crore"));
+        assertEquals(new BigDecimal("1000000000000"), subject.getConversion("1 lakh crore"));
     }
 
     @Test
     public void shouldReturn100000For1_lakhcrore() throws Exception {
-        assertEquals(new BigDecimal("100000000000"), subject.getConversion("1 lakhcrore"));
+        assertEquals(new BigDecimal("1000000000000"), subject.getConversion("1 lakhcrore"));
     }
 }

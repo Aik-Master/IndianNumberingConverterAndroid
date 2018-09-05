@@ -8,7 +8,7 @@ public class Conversions {
 
     static {
         fromIndian = new HashMap<>();
-        fromIndian.put("lakh", 10000);
+        fromIndian.put("lakh", 100000);
         fromIndian.put("crore", 10000000);
     }
 
